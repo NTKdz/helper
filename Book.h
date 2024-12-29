@@ -1,10 +1,8 @@
 #ifndef BOOK_H
 #define BOOK_H
 
-#include <stdio.h>
-#include <string.h>
-
-typedef struct {
+typedef struct
+{
     int id;
     char bookName[100];
     char author[50];

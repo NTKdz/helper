@@ -1,12 +1,16 @@
-#include "Book.h"
+#include <stdio.h>
+#include "book.h"
 
-int main() {
+int main()
+{
     Book books[50];
     int n = 0;
     int choice;
-    // loadBooksFromFile(books, &n);
 
-    do {
+    loadBooksFromFile(books, &n);
+
+    do
+    {
         printf("\n=========== MENU ===========\n");
         printf("1. Nhap so luong va thong tin sach\n");
         printf("2. Hien thi thong tin sach\n");
@@ -19,32 +23,32 @@ int main() {
         printf("Lua chon cua ban: ");
         scanf("%d", &choice);
 
-        // switch (choice) {
-        //     case 1:
-        //         inputBook(books, &n);
-        //         break;
-        //     case 2:
-        //         printBook(books, n);
-        //         break;
-        //     case 3:
-        //         addBook(books, &n);
-        //         break;
-        //     case 4:
-        //         deleteBook(books, &n);
-        //         break;
-        //     case 5:
-        //         updateBook(books, n);
-        //         break;
-        //     case 6:
-        //         findBook(books, n);
-        //         break;
-        //     case 7:
-        //         saveBooksToFile(books, n);
-        //         printf("Exiting...\n");
-        //         break;
-        //     default:
-        //         printf("Lua chon khong hop le. Vui long nhap lai.\n");
-        // }
+        switch (choice)
+        {
+        case 1:
+            inputBook(books, &n);
+            break;
+        case 2:
+            printBook(books, n);
+            break;
+        case 3:
+            addBook(books, &n);
+            break;
+        case 4:
+            deleteBook(books, &n);
+            break;
+        case 5:
+            updateBook(books, n);
+            break;
+        case 6:
+            findBook(books, n);
+            break;
+        case 7:
+            saveBooksToFile(books, n);
+            break;
+        default:
+            printf("Lua chon khong hop le. Vui long nhap lai.\n");
+        }
     } while (choice != 7);
 
     return 0;
